@@ -122,7 +122,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/",
+							"raw": "http://127.0.0.1:8000/api/comments/video_id?jNQXAC9IVRw",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -132,7 +132,15 @@
 							],
 							"port": "8000",
 							"path": [
-								""
+								"api",
+								"comments",
+								"video_id"
+							],
+							"query": [
+								{
+									"key": "jNQXAC9IVRw",
+									"value": null
+								}
 							]
 						}
 					},
@@ -145,13 +153,13 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MzE4ODU5LCJpYXQiOjE2NDc0NTQ4NTksImp0aSI6Ijc5YjM1YTU4NDU1ZDRkMjJiNzk2NzQ5MDRlYTBhZmQ3IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJobGF0dGEiLCJmaXJzdF9uYW1lIjoiSGFycmlzb24ifQ.eEyDue67MWbdWoitvnONdzOJ5SwPzxIiKEtkDedJjtQ",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MzI4MDQ4LCJpYXQiOjE2NDc0NjQwNDgsImp0aSI6IjY2MzRmYjJkZDczYTQ3ZjNiZTIyYjk4OTc5MDc4MzQ0IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJobGF0dGEiLCJmaXJzdF9uYW1lIjoiSGFycmlzb24ifQ.Fi5DPIJ0vAikzCBA6leoJLEsYSHM2YRjIZ0HESMlwjQ",
 								"type": "default"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"video_id\": \"\",\r\n    \"text\": \"Great work!\"\r\n}",
+							"raw": "{\r\n    \"video_id\": \"jNQXAC9IVRw\",\r\n    \"text\": \"Great work!\",\r\n    \"likes\": 0,\r\n    \"dislikes\": 0\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -159,7 +167,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/",
+							"raw": "http://127.0.0.1:8000/api/comments/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -169,6 +177,8 @@
 							],
 							"port": "8000",
 							"path": [
+								"api",
+								"comments",
 								""
 							]
 						}
