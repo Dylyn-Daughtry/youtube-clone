@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d4409d57-7119-4339-bfae-1f3a18bc6341",
+		"_postman_id": "ddf33952-f075-48fa-af90-6b9fef4769df",
 		"name": "DRF_JWT_Backend",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"dantheman\",\r\n    \"password\": \"password1@\",\r\n    \"email\": \"dan@devcodecamp.com\",\r\n    \"first_name\": \"Daniel\",\r\n    \"last_name\": \"Tulpa\"\r\n}",
+							"raw": "{\r\n    \"username\": \"hlatta\",\r\n    \"password\": \"password060\",\r\n    \"email\": \"killionaire060@gmail.com\",\r\n    \"first_name\": \"Harrison\",\r\n    \"last_name\": \"Latta\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -49,7 +49,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"dantheman\",\r\n    \"password\": \"password1@\"\r\n}",
+							"raw": "{\r\n    \"username\": \"hlatta\",\r\n    \"password\": \"password060\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -83,7 +83,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"refresh\": \"PASTE REFRESH TOKEN FROM LOGIN HERE\"\r\n}",
+							"raw": "{\r\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY0OTE4Mjg1OSwiaWF0IjoxNjQ3NDU0ODU5LCJqdGkiOiIxMDZlNmMxZmE0Mzc0OWIyYTAwZmVlNjIwYjM0MDY4OCIsInVzZXJfaWQiOjIsInVzZXJuYW1lIjoiaGxhdHRhIiwiZmlyc3RfbmFtZSI6IkhhcnJpc29uIn0.B3cFK7qCj2Ao5N8NvjXpuO2DKwmySp7RtSpPXZMoWK4\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -114,15 +114,15 @@
 			]
 		},
 		{
-			"name": "Cars",
+			"name": "Comments",
 			"item": [
 				{
-					"name": "GET all cars (unprotected)",
+					"name": "Get_Video_Comments",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/cars/all/",
+							"raw": "http://127.0.0.1:8000/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -132,9 +132,6 @@
 							],
 							"port": "8000",
 							"path": [
-								"api",
-								"cars",
-								"all",
 								""
 							]
 						}
@@ -142,61 +139,19 @@
 					"response": []
 				},
 				{
-					"name": "GET cars for user (protected)",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MTU2ODM5LCJpYXQiOjE2NDcyOTI4MzksImp0aSI6ImJjYzJhZTUzOTRlYzQ3OThiNjI0YTcwYTYzYjcxOThmIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJqanZlZ2EiLCJmaXJzdF9uYW1lIjoiIn0.l9ATW5CpWF2TGniqVgU1I-a8LkuqgLQ4ok3tJh6asAA",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/cars/",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"cars",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "POST new car for user (protected)",
+					"name": "Create_Comment",
 					"request": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MTU3MjczLCJpYXQiOjE2NDcyOTMyNzMsImp0aSI6IjIyMDQ4YTg2NzEzMTQyMmZhZjJmNDNmYmI2MTExZDg2IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJkYW50aGVtYW4iLCJmaXJzdF9uYW1lIjoiRGFuaWVsIn0.DeTe47E7-9eCr7xKE22m3CvFMDj0Sxye5A6ndwJ024M",
-								"type": "text"
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MzE4ODU5LCJpYXQiOjE2NDc0NTQ4NTksImp0aSI6Ijc5YjM1YTU4NDU1ZDRkMjJiNzk2NzQ5MDRlYTBhZmQ3IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJobGF0dGEiLCJmaXJzdF9uYW1lIjoiSGFycmlzb24ifQ.eEyDue67MWbdWoitvnONdzOJ5SwPzxIiKEtkDedJjtQ",
+								"type": "default"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"make\": \"Ford\",\n    \"model\": \"F150\",\n    \"year\": 1999\n}",
+							"raw": "{\r\n    \"video_id\": \"\",\r\n    \"text\": \"Great work!\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -204,7 +159,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/cars/",
+							"raw": "http://127.0.0.1:8000/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -214,8 +169,108 @@
 							],
 							"port": "8000",
 							"path": [
-								"api",
-								"cars",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Comment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MzE4ODU5LCJpYXQiOjE2NDc0NTQ4NTksImp0aSI6Ijc5YjM1YTU4NDU1ZDRkMjJiNzk2NzQ5MDRlYTBhZmQ3IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJobGF0dGEiLCJmaXJzdF9uYW1lIjoiSGFycmlzb24ifQ.eEyDue67MWbdWoitvnONdzOJ5SwPzxIiKEtkDedJjtQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"video_id\": \"\",\r\n    \"text\": \"\",\r\n    \"likes\": 0,\r\n    \"dislikes\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create_Reply",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MzE4ODU5LCJpYXQiOjE2NDc0NTQ4NTksImp0aSI6Ijc5YjM1YTU4NDU1ZDRkMjJiNzk2NzQ5MDRlYTBhZmQ3IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJobGF0dGEiLCJmaXJzdF9uYW1lIjoiSGFycmlzb24ifQ.eEyDue67MWbdWoitvnONdzOJ5SwPzxIiKEtkDedJjtQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"A reply to a comment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Comment_Replies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MzE4ODU5LCJpYXQiOjE2NDc0NTQ4NTksImp0aSI6Ijc5YjM1YTU4NDU1ZDRkMjJiNzk2NzQ5MDRlYTBhZmQ3IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJobGF0dGEiLCJmaXJzdF9uYW1lIjoiSGFycmlzb24ifQ.eEyDue67MWbdWoitvnONdzOJ5SwPzxIiKEtkDedJjtQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
 								""
 							]
 						}
