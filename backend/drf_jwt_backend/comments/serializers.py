@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Comments
-from models import Reply
+from .models import Reply
 
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
