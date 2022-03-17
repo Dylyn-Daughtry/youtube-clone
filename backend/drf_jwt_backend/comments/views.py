@@ -11,14 +11,12 @@ from rest_framework.permissions import OR, IsAuthenticated, AllowAny
 # Create your views here.
 
 @api_view(['GET'])
-@permission_classes([AllowAny])
 def get_comment(request):
     comment_sort = request.query_params.get('video_id')
     comment = Comments.objects.all()
 
     if comment_sort:
         comment = comment.filter(video_id=comment_sort)
-        
 
     serializer = CommentSerializer(comment, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
@@ -31,19 +29,21 @@ def get_create_comment(request):
         if serializer.is_valid(raise_exception=True):
             serializer.save(user=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST) 
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
-@api_view(['PUT'])
+@api_view(['PUT', 'GET'])
 @permission_classes([IsAuthenticated])
-def update_comment_by_id(request, id):
-    comment = Comments.objects.get(id = id)
-    serializer = CommentSerializer(comment, data=request.data)
-    if serializer.is_valid():
-        serializer.save()
-        return Response(serializer.data, status=status.HTTP_200_OK)
-    
-    
+def update_comment_by_id(request, pk):
+    if request.method == 'PUT':
+        comment = Comments.objects.get(pk = pk)
+        serializer = CommentSerializer(comment, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+    elif request.method == 'GET':
+        comment = Comments.objects.get(pk = pk)
+        reply = Reply.objects.get(pk = pk)
+
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
@@ -56,3 +56,4 @@ def post_reply(request, pk):
         serializer.save(user=request.user)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
