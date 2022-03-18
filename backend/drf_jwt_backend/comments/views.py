@@ -47,6 +47,8 @@ def update_comment_by_id(request, pk):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
+# note for Dylyn
+
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
 def get_post_reply(request, pk):
