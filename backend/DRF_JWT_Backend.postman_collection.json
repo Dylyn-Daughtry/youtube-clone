@@ -153,13 +153,13 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MzI4MDQ4LCJpYXQiOjE2NDc0NjQwNDgsImp0aSI6IjY2MzRmYjJkZDczYTQ3ZjNiZTIyYjk4OTc5MDc4MzQ0IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJobGF0dGEiLCJmaXJzdF9uYW1lIjoiSGFycmlzb24ifQ.Fi5DPIJ0vAikzCBA6leoJLEsYSHM2YRjIZ0HESMlwjQ",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4NDA5MDcwLCJpYXQiOjE2NDc1NDUwNzAsImp0aSI6IjgxYzZkZmI5OWJlZjQxZThhZGQyNTc5MmFhM2ZlYjA3IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJobGF0dGEiLCJmaXJzdF9uYW1lIjoiSGFycmlzb24ifQ.7_hMUPiSWbr9jyQsB8G_v_mrD40nanPP5XXJZZzRFd0",
 								"type": "default"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"video_id\": \"jNQXAC9IVRw\",\r\n    \"text\": \"Great work!\",\r\n    \"likes\": 0,\r\n    \"dislikes\": 0\r\n}",
+							"raw": "{\r\n    \"video_id\": \"jNQXAC9IVRw\",\r\n    \"text\": \"Great work! :)\",\r\n    \"likes\": 0,\r\n    \"dislikes\": 0\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -206,7 +206,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/",
+							"raw": "http://127.0.0.1:8000/api/comments/update_comment/1/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -216,6 +216,10 @@
 							],
 							"port": "8000",
 							"path": [
+								"api",
+								"comments",
+								"update_comment",
+								"1",
 								""
 							]
 						}
@@ -229,13 +233,13 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MzE4ODU5LCJpYXQiOjE2NDc0NTQ4NTksImp0aSI6Ijc5YjM1YTU4NDU1ZDRkMjJiNzk2NzQ5MDRlYTBhZmQ3IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJobGF0dGEiLCJmaXJzdF9uYW1lIjoiSGFycmlzb24ifQ.eEyDue67MWbdWoitvnONdzOJ5SwPzxIiKEtkDedJjtQ",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4NDA5MDcwLCJpYXQiOjE2NDc1NDUwNzAsImp0aSI6IjgxYzZkZmI5OWJlZjQxZThhZGQyNTc5MmFhM2ZlYjA3IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJobGF0dGEiLCJmaXJzdF9uYW1lIjoiSGFycmlzb24ifQ.7_hMUPiSWbr9jyQsB8G_v_mrD40nanPP5XXJZZzRFd0",
 								"type": "default"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"text\": \"A reply to a comment\"\r\n}",
+							"raw": "{\r\n    \"text\": \"this is a new test James\",\r\n    \"user\": 2,\r\n    \"comment\": 3\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -243,7 +247,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/",
+							"raw": "http://127.0.0.1:8000/api/comments/reply/1/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -253,6 +257,10 @@
 							],
 							"port": "8000",
 							"path": [
+								"api",
+								"comments",
+								"reply",
+								"1",
 								""
 							]
 						}
@@ -266,12 +274,12 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MzE4ODU5LCJpYXQiOjE2NDc0NTQ4NTksImp0aSI6Ijc5YjM1YTU4NDU1ZDRkMjJiNzk2NzQ5MDRlYTBhZmQ3IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJobGF0dGEiLCJmaXJzdF9uYW1lIjoiSGFycmlzb24ifQ.eEyDue67MWbdWoitvnONdzOJ5SwPzxIiKEtkDedJjtQ",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4NDg0MDQ1LCJpYXQiOjE2NDc2MjAwNDUsImp0aSI6ImM1MzU2Y2Q2OWY0OTQ4MzNiZGQzYTdjNGVmY2Y5NjI0IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJobGF0dGEiLCJmaXJzdF9uYW1lIjoiSGFycmlzb24ifQ.0kU_nJnXzIPhQSlRO-pWTpoWwjr0eEOSGQDJT9dm6Jo",
 								"type": "default"
 							}
 						],
 						"url": {
-							"raw": "http://127.0.0.1:8000/",
+							"raw": "http://127.0.0.1:8000/api/comments/reply/3/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -281,6 +289,10 @@
 							],
 							"port": "8000",
 							"path": [
+								"api",
+								"comments",
+								"reply",
+								"3",
 								""
 							]
 						}
