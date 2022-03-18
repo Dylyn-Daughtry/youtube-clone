@@ -42,8 +42,9 @@ def update_comment_by_id(request, pk):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
     elif request.method == 'GET':
-        comment = Comments.objects.get(pk = pk)
-        reply = Reply.objects.get(pk = pk)
+        comment = Comments.objects.filter(pk = pk)
+        serializer = CommentSerializer(comment, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 @api_view(['GET', 'POST'])
