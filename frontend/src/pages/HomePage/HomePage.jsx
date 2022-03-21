@@ -14,8 +14,7 @@ const HomePage = () => {
   return (
     <div className="container">
       <h1>Welcome Home {user.username}!</h1>
-      <VideoPlayer/>
-      <Comment/>
+      <Comment/> <VideoPlayer/>
     </div>
   );
 };
