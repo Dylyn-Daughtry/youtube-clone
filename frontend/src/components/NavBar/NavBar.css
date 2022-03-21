@@ -9,22 +9,22 @@ li {
 }
 
 .navBar {
-  background: steelblue;
-  box-shadow: 4px 2px 5px gray;
-  color: white;
+  background: rgb(192, 23, 23);
+  box-shadow: 4px 2px 5px rgb(7, 0, 0);
+  color: rgb(3, 0, 0);
   margin-bottom: 2rem;
   padding: 1.5rem 2rem;
 }
 
 .navBar button {
   background: transparent;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid rgb(253, 253, 253);
+  color: rgb(252, 252, 252);
   padding: 0.4rem 0.5rem;
 }
 
 .navBar button:hover {
-  background: white;
+  background: rgb(250, 250, 250);
   color: steelblue;
   cursor: pointer;
 }
