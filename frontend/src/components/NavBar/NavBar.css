@@ -25,11 +25,15 @@ li {
 
 .navBar button:hover {
   background: rgb(250, 250, 250);
-  color: steelblue;
+  color: rgb(192, 23, 23);
   cursor: pointer;
 }
 
 .brand {
   cursor: pointer;
   font-size: 2rem;
+}
+
+.title {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
