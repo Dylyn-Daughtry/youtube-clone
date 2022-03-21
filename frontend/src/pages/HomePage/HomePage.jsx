@@ -13,7 +13,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchCars = async () => {
       try {
-        let response = await axios.get("http://127.0.0.1:8000/api/cars/", {
+        let response = await axios.get("http://127.0.0.1:8000/api/comments/", {
           headers: {
             Authorization: "Bearer " + token,
           },
