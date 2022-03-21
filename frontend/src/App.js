@@ -20,7 +20,6 @@ function App() {
   return (
     <div>
       <Navbar />
-      <VideoPlayer/>
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/register" element={<RegisterPage />} />

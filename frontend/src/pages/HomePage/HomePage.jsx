@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 
 import axios from "axios";
 import useAuth from "../../hooks/useAuth";
+import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
+import VideoPage from "../VideoPage/VideoPage";
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
@@ -27,6 +29,7 @@ const HomePage = () => {
   }, [token]);
   return (
     <div className="container">
+      <VideoPage />
       <h1>Home Page for {user.username}!</h1>
       {cars &&
         cars.map((car) => (
