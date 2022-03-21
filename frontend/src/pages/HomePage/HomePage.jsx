@@ -13,7 +13,7 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      <h1>Home Page for {user.username}!</h1>
+      <h1>Welcome Home {user.username}!</h1>
       <VideoPlayer/>
       <Comment/>
     </div>
