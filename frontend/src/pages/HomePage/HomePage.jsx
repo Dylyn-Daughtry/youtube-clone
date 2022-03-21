@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-
+import Comment from "../../components/Comment/Comment";
 import axios from "axios";
 import useAuth from "../../hooks/useAuth";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
@@ -15,6 +15,7 @@ const HomePage = () => {
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
       <VideoPlayer/>
+      <Comment/>
     </div>
   );
 };
