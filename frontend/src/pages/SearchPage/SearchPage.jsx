@@ -4,24 +4,22 @@ import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import { useLocation } from "react-router";
 
 const SearchPage = (props) => {
-  const { state } = useLocation();
+  const {state} = useLocation();
   const [searchResult, setSearchResult] = useState([]);
 
   async function search() {
-    try {
+  
       const search = await axios.get(
-        `https://www.googleapis.com/youtube/v3/search?q=${state.searchTerm}&totalResults=6&key=AIzaSyBDtWaBV1dE1YDItvhkwBBibwZnWB9ethc`
+        `https://www.googleapis.com/youtube/v3/search?q=${state.searchTerm}&totalResults=6&key=AIzaSyBDtWaBV1dE1YDItvhkwBBibwZnWB9ethc&type=video`
       );
       setSearchResult(search.data.items);
       console.log(searchResult);
-    } catch (error) {
-      console.log(error);
-    }
+
   }
 
   useEffect(() => {
     search();
-  }, []);
+  }, [state.searchTerm]);
 
   return (
     <div>
