@@ -1,0 +1,24 @@
+.dislikebutton {
+    color: aliceblue;
+    width: 10rem !important;
+    margin-left: 2rem;
+    text-decoration: none;
+    border-radius: 15%;
+    
+
+    
+}
+
+.active {
+    background-color: rgb(226, 19, 19);
+}
+
+.fas {
+    color: black;
+}
+
+.svgdislike {
+    width: 1.5rem;
+    margin-top: 1rem;
+    
+}

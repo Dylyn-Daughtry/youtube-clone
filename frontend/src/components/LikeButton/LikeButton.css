@@ -1,0 +1,23 @@
+.mybutton {
+    color: aliceblue;
+    width: 10rem !important;
+    margin-left: 2rem;
+    text-decoration: none;
+    border-radius: 15%;
+    
+
+    
+}
+
+.active {
+    background-color: rgb(228, 15, 15);
+}
+
+.fas {
+    color: black;
+}
+
+.svglike {
+    width: 1.5rem;
+    margin-top: 1rem;
+}

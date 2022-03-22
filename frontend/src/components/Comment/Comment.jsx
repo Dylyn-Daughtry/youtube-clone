@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Comment.css'
-
+import LikeButton from '../LikeButton/LikeButton';
+import DislikeButton from '../DislikeButton/DislikeButton';
 
 const Comment = (props) => {
 
@@ -21,6 +22,7 @@ const Comment = (props) => {
         returnComment()
     },[])
 
+    
     return ( 
         <div className='commenttable'>
             <h2>Comments</h2>
@@ -31,8 +33,10 @@ const Comment = (props) => {
                     <tr key = {comment.id}>
                         <td>{comment.user_id}</td>
                         <td>{comment.text}</td>
-                        <td>{comment.likes}</td>
-                        <td>{comment.dislikes}</td>                          
+                        <td>{comment.likes}</td> 
+                        <LikeButton/>
+                        <td>{comment.dislikes}</td>   
+                        <DislikeButton/>
                     </tr>
                     )
                     )}
@@ -41,5 +45,4 @@ const Comment = (props) => {
         </div>
     )
 }
- 
 export default Comment;

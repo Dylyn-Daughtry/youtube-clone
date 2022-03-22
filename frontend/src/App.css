@@ -19,12 +19,11 @@ p {
 
 button {
   background-color: transparent;
-  border: 2px solid rgb(209, 8, 8);
+  border: 2px solid rgb(250, 249, 249);
   color: rgb(253, 253, 253);
   font-size: 1rem;
   font-family: inherit;
-  max-width: 100px;
-  padding: 0.5rem 0.5rem;
+  width: auto;
 }
 
 button:hover {
