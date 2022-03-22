@@ -20,6 +20,8 @@ const HomePage = () => {
         <div className="videoplayer">
           <VideoPlayer/>
         </div>
+        <div>
+        </div>
       </div>
     </div>
   );
