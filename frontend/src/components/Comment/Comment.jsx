@@ -25,15 +25,11 @@ const Comment = (props) => {
         <div className='commenttable'>
             <h2>Comments</h2>
             <table className='table'>
-                <thead>
-                    <tr>
-                        <th>{comment.user_id}</th>
-                    </tr>
-                </thead>
                 <tbody>
                     {comment && comment.map((comment)=>
                     (
                     <tr key = {comment.id}>
+                        <td>{comment.user_id}</td>
                         <td>{comment.text}</td>
                         <td>{comment.likes}</td>
                         <td>{comment.dislikes}</td>                          

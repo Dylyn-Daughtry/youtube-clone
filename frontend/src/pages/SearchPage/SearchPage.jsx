@@ -1,22 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import SearchBar from '../../components/SearchBar/SearchBar';
 
 const SearchPage = (props) => {
-
-    const [e, setE] = useState('')
-    props.setE(e);
-
+    
+    const [searchResult, setSearchResult] = useState([''])
+    
     async function search(){
-        await axios.get(`https://www.googleapis.com/youtube/v3/search?q=${e}&totalResults=6&key=AIzaSyBDtWaBV1dE1YDItvhkwBBibwZnWB9ethc`)
-        console.log(search)
+        try{
+            const search = await axios.get(`https://www.googleapis.com/youtube/v3/search?q=${props.e}&totalResults=6&key=AIzaSyBDtWaBV1dE1YDItvhkwBBibwZnWB9ethc`)
+        setSearchResult(search.data)
+        console.log(searchResult)
     }
-
-    return ( 
-        <div>
-
+    catch(error){
+        console.log(error)}}
+        useEffect(() => {search()}, [])
+        
+        return ( 
+            
+         <div>
+            
         </div>
      );
 }
- 
+
 export default SearchPage;
