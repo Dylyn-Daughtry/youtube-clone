@@ -4,7 +4,6 @@ import Comment from "../../components/Comment/Comment";
 import axios from "axios";
 import useAuth from "../../hooks/useAuth";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
-import VideoPage from "../VideoPage/VideoPage";
 import './HomePage.css'
 
 const HomePage = () => {

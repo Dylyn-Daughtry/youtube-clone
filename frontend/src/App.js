@@ -25,7 +25,7 @@ function App() {
         <Route path="/" element={<HomePage />}/>
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path='/?' element={<SearchPage />} />
+        <Route path='/search' element={<SearchPage />} />
       </Routes>
       <Footer />
     </div>
