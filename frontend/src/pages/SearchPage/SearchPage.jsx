@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import { useLocation } from "react-router";
 import { useNavigate } from "react-router-dom";
 
