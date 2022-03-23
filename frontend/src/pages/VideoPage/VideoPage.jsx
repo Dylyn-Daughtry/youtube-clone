@@ -4,6 +4,7 @@ import Comment from "../../components/Comment/Comment";
 import axios from "axios";
 import useAuth from "../../hooks/useAuth";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
+import RelatedVideos from "../../components/RelatedVideos/RelatedVideos";
 import { useLocation } from "react-router";
 
 const VideoPage = (props) => {
@@ -19,6 +20,7 @@ const VideoPage = (props) => {
           <VideoPlayer video={state.videoId}/>
         </div>
         <div>
+        <RelatedVideos videoId={state.videoId} />
         </div>
       </div>
     </div>
