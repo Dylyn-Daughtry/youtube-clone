@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import { useLocation } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const SearchPage = (props) => {
+    const navigate = useNavigate();
   const {state} = useLocation();
   const [searchResult, setSearchResult] = useState([]);
 
@@ -30,7 +32,10 @@ const SearchPage = (props) => {
           {searchResult &&
             searchResult.map((searchResult) => (
               <tr key={searchResult.etag}>
-                <VideoPlayer video={searchResult.id.videoId} />
+                <img src={`https://i.ytimg.com/vi/${searchResult.id.videoId}/hqdefault.jpg`} onClick={() => {
+                    navigate("/video", {state:{videoId:searchResult.id.videoId}})
+                }}>
+                </img>
               </tr>
             ))}
         </tbody>

@@ -11,7 +11,7 @@ const Comment = (props) => {
 
     async function returnComment(){
         try{
-        let retrieveComment = await axios.get(`http://127.0.0.1:8000/api/comments/video_id?jNQXAC9IVRw`)
+        let retrieveComment = await axios.get(`http://127.0.0.1:8000/api/comments/video_id?${props.videoId}`)
         setComment(retrieveComment.data)
             }
         catch(error){
