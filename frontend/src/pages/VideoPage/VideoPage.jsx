@@ -15,12 +15,14 @@ const VideoPage = (props) => {
         <div className="wrapper">
       <h1>Welcome Home {user.username}!</h1>
       <div className="container">
-        <Comment videoId={state.videoId}/>
+        <Comment videoId={state.videoId.id.videoId}/>
         <div className="videoplayer">
-          <VideoPlayer video={state.videoId}/>
+            {state.videoId.snippet.title}
+          <VideoPlayer video={state.videoId.id.videoId}/>
+          {state.videoId.snippet.description}
         </div>
         <div>
-        <RelatedVideos videoId={state.videoId} />
+        <RelatedVideos videoId={state.videoId.id.videoId} />
         </div>
       </div>
     </div>
