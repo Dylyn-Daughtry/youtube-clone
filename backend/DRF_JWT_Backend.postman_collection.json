@@ -122,7 +122,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/comments/video_id?jNQXAC9IVRw",
+							"raw": "http://127.0.0.1:8000/api/comments/video_id?",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -138,7 +138,7 @@
 							],
 							"query": [
 								{
-									"key": "jNQXAC9IVRw",
+									"key": "",
 									"value": null
 								}
 							]
