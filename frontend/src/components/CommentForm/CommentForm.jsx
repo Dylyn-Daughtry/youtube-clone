@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import useAuth from '../../hooks/useAuth';
+import axios from 'axios';
 import './CommentForm.css'
 
 const CreateComment = (props) => {
     const [text, setText] = useState('')
     const [user, token] = useAuth();
 
-    function handleSubmit(submissionForm){
+    async function handleSubmit(submissionForm){
         submissionForm.preventDefault();
         let newEntry = {
             user_id: user,
@@ -16,7 +17,13 @@ const CreateComment = (props) => {
             dislikes: 0,
         };
         console.log(newEntry)
-        props.createComment(newEntry)
+        console.log(token)
+        await axios.post('http://127.0.0.1:8000/api/comments/', newEntry, {
+           headers: {
+               Authorization: 'Bearer ' + token,
+           },
+        });
+
     }
 
     return (
@@ -28,5 +35,4 @@ const CreateComment = (props) => {
         </div>
     )
 }
-
-export default CreateComment
+export default CreateComment;
