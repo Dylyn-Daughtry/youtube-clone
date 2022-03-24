@@ -11,7 +11,7 @@ const SearchPage = (props) => {
   async function search() {
   
       const search = await axios.get(
-        `https://www.googleapis.com/youtube/v3/search?q=${state.searchTerm}&totalResults=6&key=AIzaSyBDtWaBV1dE1YDItvhkwBBibwZnWB9ethc&type=video`
+        `https://www.googleapis.com/youtube/v3/search?q=${state.searchTerm}&part=snippet&totalResults=6&key=AIzaSyBDtWaBV1dE1YDItvhkwBBibwZnWB9ethc&type=video`
       );
       setSearchResult(search.data.items);
       console.log(searchResult);
@@ -31,10 +31,12 @@ const SearchPage = (props) => {
           {searchResult &&
             searchResult.map((searchResult) => (
               <tr key={searchResult.etag}>
+                  <td>{searchResult.snippet.title}</td>
                 <img src={`https://i.ytimg.com/vi/${searchResult.id.videoId}/hqdefault.jpg`} onClick={() => {
-                    navigate("/video", {state:{videoId:searchResult.id.videoId}})
+                    navigate("/video", {state:{videoId:searchResult}})
                 }}>
                 </img>
+                <td>{searchResult.snippet.description}</td>
               </tr>
             ))}
         </tbody>
