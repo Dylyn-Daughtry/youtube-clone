@@ -6,6 +6,7 @@ import useAuth from "../../hooks/useAuth";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import RelatedVideos from "../../components/RelatedVideos/RelatedVideos";
 import { useLocation } from "react-router";
+import './VideoPage.css'
 
 const VideoPage = (props) => {
     const [user, token] = useAuth();

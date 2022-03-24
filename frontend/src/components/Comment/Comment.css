@@ -1,6 +1,11 @@
 .commenttable {
     display: flex;
     flex-direction: column;
-    margin-right: 10rem;
+    margin-right: 5rem;
     width: 20%;
 }
+
+.reply {
+    margin-left: 5rem;
+}
+

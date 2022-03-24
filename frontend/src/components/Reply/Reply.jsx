@@ -14,7 +14,7 @@ const Reply = (props) => {
             text: text,
         };
         console.log(newEntry)
-        await axios.post('http://127.0.0.1:8000/', newEntry, {
+        await axios.post('http://127.0.0.1:8000/reply', newEntry, {
             headers: {
                 Authorization: 'Bearer ' + token,
             },

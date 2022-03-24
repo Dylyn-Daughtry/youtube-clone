@@ -29,22 +29,22 @@ const Comment = (props) => {
         <div className='commenttable'>
             <h2>Comments</h2>
             <table className='table'>
-                <tbody>
+                <tbody className='commentBody'>
                     {comment && comment.map((comment)=>
                     (
-                        <>
-                    <tr key = {comment.id}>
-                        <td>{comment.user_id}</td>
+                        <React.Fragment key = {comment.id}>
+                    <tr>
+                        <td>{comment.user.username}</td>
                         <td>{comment.text}</td>
                         <td>{comment.likes}</td> 
                         <LikeButton/>
                         <td>{comment.dislikes}</td>   
                         <DislikeButton/>
                     </tr>
-                    <tr>
+                    <tr className='reply'>
                         <Reply/>
                     </tr>
-                    </>
+                    </React.Fragment>
                     )
                     )}
                 </tbody>
